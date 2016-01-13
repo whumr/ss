@@ -1,8 +1,8 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>com.iyitong</groupId>
-	<artifactId>root</artifactId>
+	<groupId>com.savior</groupId>
+	<artifactId>savior</artifactId>
 	<version>1.0.0-SNAPSHOT</version>
     <modules>
         <module>business</module>
@@ -10,7 +10,7 @@
         <module>admin</module>
     </modules>
     <packaging>pom</packaging>
-	<name>root</name>
+	<name>savior</name>
 
 	<properties>
         <business.version>1.0.0</business.version>

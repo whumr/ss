@@ -11,7 +11,7 @@
 		http://www.springframework.org/schema/mvc
         http://www.springframework.org/schema/mvc/spring-mvc-4.0.xsd">
    
-	<context:component-scan base-package="com.confidant" />
+	<context:component-scan base-package="com.savior" />
     <mvc:annotation-driven/>
 	<context:property-placeholder location="classpath:config.properties" />
     <mvc:resources mapping="/css/**" location="/css/" />
@@ -22,14 +22,14 @@
     <!--<mvc:interceptors>-->
         <!--<mvc:interceptor>-->
             <!--&lt;!&ndash; 需拦截的地址 &ndash;&gt;-->
-            <!--<mvc:mapping path="/member/*" />-->
+            <!--<mvc:mapping path="/account/*" />-->
             <!--&lt;!&ndash; 需排除拦截的地址 &ndash;&gt;-->
-            <!--<mvc:exclude-mapping path="/member/login"/>-->
-            <!--<mvc:exclude-mapping path="/member/checkAccount"/>-->
-            <!--<mvc:exclude-mapping path="/member/save"/>-->
-            <!--<mvc:exclude-mapping path="/member/login_check"/>-->
-            <!--<mvc:exclude-mapping path="/member/reg"/>-->
-            <!--<bean class="com.confidant.interceptor.SessionInterceptor" />-->
+            <!--<mvc:exclude-mapping path="/account/login"/>-->
+            <!--<mvc:exclude-mapping path="/account/checkAccount"/>-->
+            <!--<mvc:exclude-mapping path="/account/save"/>-->
+            <!--<mvc:exclude-mapping path="/account/login_check"/>-->
+            <!--<mvc:exclude-mapping path="/account/reg"/>-->
+            <!--<bean class="com.saiorerceptor.SessionInterceptor" />-->
         <!--</mvc:interceptor>-->
     <!--</mvc:interceptors>-->
 

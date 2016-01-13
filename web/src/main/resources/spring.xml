@@ -11,7 +11,7 @@
 		http://www.springframework.org/schema/mvc
         http://www.springframework.org/schema/mvc/spring-mvc-4.0.xsd">
    
-	<context:component-scan base-package="com.confidant" />
+	<context:component-scan base-package="com.savior" />
     <mvc:annotation-driven/>
 	<context:property-placeholder location="classpath:config.properties" />
     <mvc:resources mapping="/css/**" location="/css/" />
@@ -28,7 +28,7 @@
             <mvc:exclude-mapping path="/member/save"/>
             <mvc:exclude-mapping path="/member/login_check"/>
             <mvc:exclude-mapping path="/member/reg"/>
-            <bean class="com.confidant.interceptor.SessionInterceptor" />
+            <bean class="com.savior.interceptor.SessionInterceptor" />
         </mvc:interceptor>
     </mvc:interceptors>
 

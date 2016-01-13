@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="account">
+    <insert id="insert" parameterType="Account" useGeneratedKeys="true" keyProperty="id">
+        insert into account (mobile, password, nick_name, create_date)
+        values (#{mobile}, #{password}, #{nick_name}, #{create_date})
+    </insert>
+
+    <select id="getAccountByMobile" parameterType="java.lang.String" resultType="Account">
+        select id from account where mobile = #{mobile} limit 1
+    </select>
+
+    <select id="getAccountByMobilePassword" parameterType="Account" resultType="Account">
+        select id, mobile, nick_name, create_date from account where mobile = #{mobile} and password = #{password} limit 1
+    </select>
+
+    <update id="updateAccount" parameterType="Account">
+        update account set nick_name = #{nick_name} where id = #{id}
+    </update>
+</mapper>

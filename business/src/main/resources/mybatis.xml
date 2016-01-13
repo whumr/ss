@@ -2,15 +2,13 @@
 <!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">  
 <configuration>  
     <typeAliases>
-        <typeAlias alias="Member" type="com.confidant.entity.Member"/>
-        <typeAlias alias="Country" type="com.confidant.entity.Country"/>
-        <typeAlias alias="Province" type="com.confidant.entity.Province"/>
-        <typeAlias alias="Viewspot" type="com.confidant.entity.Viewspot"/>
+        <typeAlias alias="Account" type="com.savior.entity.Account"/>
+        <typeAlias alias="Country" type="com.savior.entity.Country"/>
+        <typeAlias alias="Province" type="com.savior.entity.Province"/>
+        <typeAlias alias="City" type="com.savior.entity.City"/>
     </typeAliases>
       
     <mappers>  
-        <mapper resource="sqlmap/member.xml" />
-        <mapper resource="sqlmap/basedata.xml" />
-        <mapper resource="sqlmap/viewspot.xml" />
+        <mapper resource="sqlmap/account.xml" />
     </mappers>
 </configuration>  
