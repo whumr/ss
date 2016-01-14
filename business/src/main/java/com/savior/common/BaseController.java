@@ -18,8 +18,8 @@ import java.io.PrintWriter;
 @Controller
 public class BaseController {
 
-    protected JSONObject SUCCESS_JSON = JSON.parseObject("{succed:1}");
-    protected JSONObject FAIL_JSON = JSON.parseObject("{succed:0}");
+    protected JSONObject SUCCESS_JSON = JSON.parseObject("{success:1}");
+    protected JSONObject FAIL_JSON = JSON.parseObject("{success:0}");
 
     private static String MESSAGE = "error";
 
