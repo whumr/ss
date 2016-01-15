@@ -14,7 +14,15 @@
         select id, mobile, nick_name, create_date from account where mobile = #{mobile} and password = #{password} limit 1
     </select>
 
+    <select id="checkToken" parameterType="String" resultType="Account">
+        select id, mobile, nick_name, last_token, last_login from account where mobile = #{mobile} limit 1
+    </select>
+
     <update id="updateAccount" parameterType="Account">
         update account set nick_name = #{nick_name} where id = #{id}
+    </update>
+
+    <update id="loginAccount" parameterType="Account">
+        update account set last_token = #{last_token}, last_login = #{last_login} where id = #{id}
     </update>
 </mapper>

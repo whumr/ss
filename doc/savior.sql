@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50612
 File Encoding         : 65001
 
-Date: 2016-01-13 15:10:37
+Date: 2016-01-15 16:24:13
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -24,13 +24,19 @@ CREATE TABLE `account` (
   `mobile` bigint(20) NOT NULL,
   `password` varchar(20) NOT NULL,
   `nick_name` varchar(30) DEFAULT NULL,
-  `create_date` timestamp NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `create_date` datetime DEFAULT CURRENT_TIMESTAMP,
+  `last_token` varchar(40) DEFAULT NULL,
+  `last_login` datetime DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of account
 -- ----------------------------
+INSERT INTO `account` VALUES ('1', '13311111111', '111111', 'xx', '2016-01-13 16:19:18', 'c0a54f59-d6ab-4c20-a8e7-349bc1d9794b', '2016-01-15 15:54:11');
+INSERT INTO `account` VALUES ('2', '13311111112', '111111', 'aa', '2016-01-13 16:19:39', null, '2016-01-15 14:16:14');
+INSERT INTO `account` VALUES ('3', '13311111113', '111111', 'aa', '2016-01-13 16:23:41', null, '2016-01-15 14:13:52');
+INSERT INTO `account` VALUES ('4', '13311111114', '111111', '133****1114', '2016-01-13 16:24:26', null, '2016-01-15 14:13:52');
 
 -- ----------------------------
 -- Table structure for action
@@ -41,6 +47,7 @@ CREATE TABLE `action` (
   `creator_id` bigint(20) unsigned NOT NULL,
   `org_id` int(10) unsigned DEFAULT NULL,
   `title` varchar(50) NOT NULL,
+  `type` tinyint(4) DEFAULT '0' COMMENT '0:放生',
   `start_time` datetime DEFAULT NULL,
   `content` varchar(1000) DEFAULT NULL,
   `budget` bigint(20) unsigned DEFAULT NULL,

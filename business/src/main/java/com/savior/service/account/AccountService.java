@@ -45,4 +45,22 @@ public class AccountService extends BaseService {
     public void updateAccount(Account account) {
         baseSqlSession.update(namespace + "updateAccount", account);
     }
+
+    /**
+     * 更新登录信息
+     * @param account
+     */
+    public void updateLoginInfo(Account account) {
+        baseSqlSession.update(namespace + "loginAccount", account);
+    }
+
+    /**
+     * 获取token
+     * @param mobile
+     * @return
+     */
+    public Account checkToken(String mobile) {
+        List<Account> list = baseSqlSession.selectList(namespace + "checkToken", mobile);
+        return list.isEmpty() ? null : list.get(0);
+    }
 }
